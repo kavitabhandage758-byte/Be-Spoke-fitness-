@@ -1,432 +1,369 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BeSpoke Fitness | Hubli's Premier Unisex Gym</title>
-<script src="https://cdn.tailwindcss.com"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Oswald:wght@500;700&display=swap');
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Primary SEO Meta Tags -->
+    <title>Best Gym in Hubli | BeSpoke Fitness - Premium Unisex Fitness Center</title>
+    <meta name="description" content="Join BeSpoke Fitness, Hubli’s top-rated unisex gym with expert trainers, modern equipment, weight loss programs, strength training, cardio zone & transformation plans. Start today!">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Oswald:wght@500;700&display=swap');
+        
+        :root {
+            --brand-gold: #D4AF37;
+            --brand-dark: #121212;
+            --brand-gray: #1E1E1E;
+        }
 
-:root {
---brand-gold: #D4AF37;
---brand-dark: #121212;
---brand-gray: #1E1E1E;
-}
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--brand-dark);
+            color: white;
+            scroll-behavior: smooth;
+        }
 
-body {
-font-family: 'Inter', sans-serif;
-background-color: var(--brand-dark);
-color: white;
-scroll-behavior: smooth;
-}
+        .oswald { font-family: 'Oswald', sans-serif; }
 
-.oswald { font-family: 'Oswald', sans-serif; }
+        .gold-gradient {
+            background: linear-gradient(135deg, #D4AF37 0%, #F1D592 50%, #B8860B 100%);
+        }
 
-.gold-gradient {
-background: linear-gradient(135deg, #D4AF37 0%, #F1D592 50%, #B8860B 100%);
-}
+        .gold-text {
+            background: linear-gradient(135deg, #D4AF37 0%, #F1D592 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
 
-.gold-text {
-background: linear-gradient(135deg, #D4AF37 0%, #F1D592 100%);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-}
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
 
-.glass-card {
-background: rgba(255, 255, 255, 0.05);
-backdrop-filter: blur(10px);
-border: 1px solid rgba(255, 255, 255, 0.1);
-transition: all 0.3s ease;
-}
+        .glass-card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateY(-5px);
+        }
 
-.glass-card:hover {
-background: rgba(255, 255, 255, 0.08);
-transform: translateY(-5px);
-}
+        .nav-link:after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: var(--brand-gold);
+            transition: width .3s;
+        }
+        .nav-link:hover:after { width: 100%; }
 
-.nav-link:after {
-content: '';
-display: block;
-width: 0;
-height: 2px;
-background: var(--brand-gold);
-transition: width .3s;
-}
-.nav-link:hover:after { width: 100%; }
+        .hero-bg {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+        }
 
-.hero-bg {
-background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
-background-size: cover;
-background-position: center;
-}
+        .btn-hover:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
+        }
 
-.btn-hover:hover {
-transform: translateY(-3px);
-box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
-}
+        .whatsapp-float {
+            position: fixed;
+            bottom: 90px;
+            right: 24px;
+            background-color: #25d366;
+            color: white;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+            z-index: 100;
+            transition: all 0.3s ease;
+        }
+        
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            background-color: #128c7e;
+        }
 
-.whatsapp-float {
-position: fixed;
-bottom: 90px;
-right: 24px;
-background-color: #25d366;
-color: white;
-width: 56px;
-height: 56px;
-border-radius: 50%;
-display: flex;
-align-items: center;
-justify-content: center;
-font-size: 30px;
-box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
-z-index: 100;
-transition: all 0.3s ease;
-}
-
-.whatsapp-float:hover {
-transform: scale(1.1);
-background-color: #128c7e;
-}
-
-input::placeholder, textarea::placeholder {
-color: rgba(255, 255, 255, 0.3);
-}
-</style>
+        input::placeholder, textarea::placeholder {
+            color: rgba(255, 255, 255, 0.3);
+        }
+    </style>
 </head>
 <body>
 
-<!-- Navigation -->
-<nav class="fixed w-full z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="flex justify-between h-20 items-center">
-<div class="flex items-center">
-<span class="oswald text-2xl font-bold tracking-tighter italic"> <span class="gold-text">BESPOKE</span> FITNESS</span>
-</div>
-<div class="hidden md:flex space-x-8">
-<a href="#home" class="nav-link text-sm font-semibold uppercase tracking-wider">Home</a>
-<a href="#booking" class="nav-link text-sm font-semibold uppercase tracking-wider">Book Now</a>
-<a href="#features" class="nav-link text-sm font-semibold uppercase tracking-wider">Features</a>
-<a href="#bmi" class="nav-link text-sm font-semibold uppercase tracking-wider">BMI Calc</a>
-</div>
-<div class="flex gap-4">
-<!-- WhatsApp for Integration -->
-<a href="https://wa.me/919916328325?text=Hi BeSpoke Fitness! I'm interested in joining your gym." target="_blank" class="hidden sm:flex bg-[#25d366] px-5 py-2 rounded-full text-white font-bold text-sm btn-hover transition-all items-center gap-2">
-<i class="fa-brands fa-whatsapp"></i> CHAT
-</a>
-<!-- Calling the Owner -->
-<a href="tel:6363641399" class="gold-gradient px-6 py-2 rounded-full text-black font-bold text-sm btn-hover transition-all">
-CALL NOW
-</a>
-</div>
-</div>
-</div>
-</nav>
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex items-center">
+                    <span class="oswald text-2xl font-bold tracking-tighter italic"> <span class="gold-text">BESPOKE</span> FITNESS</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link text-sm font-semibold uppercase tracking-wider">Home</a>
+                    <a href="#about" class="nav-link text-sm font-semibold uppercase tracking-wider">About</a>
+                    <a href="#services" class="nav-link text-sm font-semibold uppercase tracking-wider">Services</a>
+                    <a href="#booking" class="nav-link text-sm font-semibold uppercase tracking-wider">Book Now</a>
+                </div>
+                <div class="flex gap-4">
+                    <a href="https://wa.me/919916328325?text=Hi BeSpoke Fitness! I'm interested in joining your gym." target="_blank" class="hidden sm:flex bg-[#25d366] px-5 py-2 rounded-full text-white font-bold text-sm btn-hover transition-all items-center gap-2">
+                        <i class="fa-brands fa-whatsapp"></i> CHAT
+                    </a>
+                    <a href="tel:6363641399" class="gold-gradient px-6 py-2 rounded-full text-black font-bold text-sm btn-hover transition-all">
+                        CALL TODAY
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
 
-<!-- Hero Section -->
-<section id="home" class="hero-bg h-screen flex items-center justify-center text-center px-4">
-<div class="max-w-4xl">
-<h2 class="text-gold-gradient oswald text-xl md:text-2xl mb-4 font-bold tracking-[0.3em] uppercase">Hubli's Premier Unisex Gym</h2>
-<h1 class="text-5xl md:text-7xl oswald font-bold mb-6 leading-tight uppercase">Elevate Your <span class="gold-text">Standard</span></h1>
-<p class="text-gray-300 text-lg mb-10 max-w-2xl mx-auto">9,000 sq. ft. of pure luxury wellness. Modern fitness solutions, spa rooms, and professional coaching tailored for you.</p>
-<div class="flex flex-col sm:flex-row justify-center gap-4">
-<button onclick="scrollToId('booking')" class="gold-gradient text-black font-extrabold px-10 py-4 rounded-md btn-hover transition-all">BOOK A FREE SESSION</button>
-<a href="https://wa.me/919916328325" target="_blank" class="border border-white/30 hover:bg-white/10 px-10 py-4 rounded-md transition-all flex items-center justify-center gap-2">
-<i class="fa-brands fa-whatsapp text-green-500"></i> WHATSAPP US
-</a>
-</div>
-</div>
-</section>
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg h-screen flex items-center justify-center text-center px-4">
+        <div class="max-w-4xl">
+            <h2 class="text-gold-gradient oswald text-xl md:text-2xl mb-4 font-bold tracking-[0.3em] uppercase">Best Gym in Hubli</h2>
+            <h1 class="text-5xl md:text-7xl oswald font-bold mb-6 leading-tight uppercase">Transform Your Body at <span class="gold-text">Hubli’s Premium</span> Fitness Destination</h1>
+            <p class="text-gray-300 text-lg mb-10 max-w-2xl mx-auto">Join BeSpoke Fitness – Trusted by Hundreds for Real Results, Expert Guidance & Powerful Transformations.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <button onclick="scrollToId('booking')" class="gold-gradient text-black font-extrabold px-10 py-4 rounded-md btn-hover transition-all uppercase">Book Free Trial</button>
+                <a href="https://wa.me/919916328325" target="_blank" class="border border-white/30 hover:bg-white/10 px-10 py-4 rounded-md transition-all flex items-center justify-center gap-2 uppercase font-bold">
+                    Join Now
+                </a>
+            </div>
+        </div>
+    </section>
 
-<!-- Why Choose Us Section -->
-<section class="py-24 px-4 bg-zinc-900 border-y border-white/5">
-<div class="max-w-7xl mx-auto">
-<div class="text-center mb-16">
-<h3 class="gold-text oswald font-bold tracking-widest mb-2 uppercase">The BeSpoke Advantage</h3>
-<h2 class="text-4xl oswald font-bold uppercase">Why Choose Our Gym?</h2>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-<div class="text-center p-6">
-<div class="text-5xl gold-text mb-4 oswald font-bold">01</div>
-<h4 class="text-xl font-bold mb-3 oswald uppercase italic">Result-Oriented Culture</h4>
-<p class="text-gray-400">We don't just provide equipment; we provide a roadmap. Our trainers ensure every drop of sweat leads to visible progress.</p>
-</div>
-<div class="text-center p-6">
-<div class="text-5xl gold-text mb-4 oswald font-bold">02</div>
-<h4 class="text-xl font-bold mb-3 oswald uppercase italic">Hygiene & Luxury</h4>
-<p class="text-gray-400">Experience Hubli's cleanest fitness environment with premium spa facilities and a massive 9,000 sq. ft. ventilated floor.</p>
-</div>
-<div class="text-center p-6">
-<div class="text-5xl gold-text mb-4 oswald font-bold">03</div>
-<h4 class="text-xl font-bold mb-3 oswald uppercase italic">Unisex & Inclusive</h4>
-<p class="text-gray-400">A professional, safe, and motivating environment for both men and women to train comfortably and confidently.</p>
-</div>
-</div>
-</div>
-</section>
+    <!-- About Section -->
+    <section id="about" class="py-24 px-4 bg-zinc-900 border-y border-white/5">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h3 class="gold-text oswald font-bold tracking-widest mb-2 uppercase">Why BeSpoke Fitness?</h3>
+                    <h2 class="text-4xl oswald font-bold uppercase mb-6">Hubballi's Top-Rated Fitness Hub</h2>
+                    <p class="text-gray-400 text-lg leading-relaxed mb-8">
+                        BeSpoke Fitness is one of the highest-rated gyms in Hubli, designed for men and women who want serious results. With expert trainers, advanced workout machines, clean interiors, cardio zones, personalized guidance, and motivating atmosphere, we help members lose fat, build muscle, and become stronger every day.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="flex items-center gap-3 text-sm font-bold uppercase tracking-tight">
+                            <i class="fa-solid fa-star text-[#D4AF37]"></i> 5.0 Star Rated
+                        </div>
+                        <div class="flex items-center gap-3 text-sm font-bold uppercase tracking-tight">
+                            <i class="fa-solid fa-users text-[#D4AF37]"></i> 300+ Happy Reviews
+                        </div>
+                        <div class="flex items-center gap-3 text-sm font-bold uppercase tracking-tight">
+                            <i class="fa-solid fa-certificate text-[#D4AF37]"></i> Certified Trainers
+                        </div>
+                        <div class="flex items-center gap-3 text-sm font-bold uppercase tracking-tight">
+                            <i class="fa-solid fa-medal text-[#D4AF37]"></i> Modern Equipment
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Best Gym in Hubli Equipment" class="rounded-3xl shadow-2xl">
+                    <div class="absolute -bottom-6 -left-6 gold-gradient p-8 rounded-2xl text-black">
+                        <p class="oswald text-4xl font-bold">9,000</p>
+                        <p class="text-xs font-bold uppercase">Square Feet Area</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- Booking Form Section -->
-<section id="booking" class="py-24 px-4 bg-black">
-<div class="max-w-5xl mx-auto">
-<div class="glass-card rounded-3xl overflow-hidden flex flex-col md:flex-row">
-<div class="md:w-1/2 p-10 bg-gradient-to-br from-zinc-800 to-black">
-<h3 class="oswald text-3xl font-bold mb-6 gold-text uppercase">Get Your Free Consultation</h3>
-<p class="text-gray-400 mb-8 leading-relaxed">Fill in your details and our manager will contact you immediately to schedule your first session. Your fitness journey starts here.</p>
-<ul class="space-y-4">
-<li class="flex items-center gap-3"><i class="fa-solid fa-check text-green-500"></i> <span>Free Body Composition Analysis</span></li>
-<li class="flex items-center gap-3"><i class="fa-solid fa-check text-green-500"></i> <span>Personal Trainer Consultation</span></li>
-<li class="flex items-center gap-3"><i class="fa-solid fa-check text-green-500"></i> <span>Tour of our 9,000 sq. ft. Hub</span></li>
-</ul>
-</div>
-<div class="md:w-1/2 p-10 bg-zinc-900/50">
-<div class="space-y-5">
-<div>
-<label class="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-2">Your Full Name</label>
-<input type="text" id="cust-name" placeholder="Enter your name" class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:border-[#D4AF37] transition-all">
-</div>
-<div>
-<label class="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-2">WhatsApp Number</label>
-<input type="tel" id="cust-phone" placeholder="Enter mobile number" class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:border-[#D4AF37] transition-all">
-</div>
-<div>
-<label class="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-2">Reason for Joining</label>
-<select id="cust-reason" class="w-full bg-zinc-800 border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:border-[#D4AF37] transition-all text-gray-300">
-<option value="Weight Loss">Weight Loss</option>
-<option value="Muscle Gain">Muscle Gain</option>
-<option value="General Fitness">General Fitness</option>
-<option value="Athletic Training">Athletic Training</option>
-<option value="Other">Other</option>
-</select>
-</div>
-<button onclick="confirmBooking()" class="w-full gold-gradient text-black font-extrabold py-4 rounded-lg btn-hover transition-all uppercase tracking-widest mt-4">
-CONFIRM BOOKING
-</button>
-</div>
-</div>
-</div>
-</div>
-</section>
+    <!-- Services Section -->
+    <section id="services" class="py-24 px-4 bg-black">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h3 class="gold-text oswald font-bold tracking-widest mb-2 uppercase">Our Fitness Services</h3>
+                <h2 class="text-4xl oswald font-bold uppercase">Comprehensive Body Transformation</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <div class="glass-card p-8 rounded-2xl text-center">
+                    <i class="fa-solid fa-arrow-trend-down text-3xl gold-text mb-4"></i>
+                    <h4 class="text-lg font-bold mb-2 oswald uppercase">Weight Loss Programs</h4>
+                    <p class="text-sm text-gray-400">Structured fat-loss guidance and cardio sessions designed for visible results.</p>
+                </div>
+                <div class="glass-card p-8 rounded-2xl text-center">
+                    <i class="fa-solid fa-dumbbell text-3xl gold-text mb-4"></i>
+                    <h4 class="text-lg font-bold mb-2 oswald uppercase">Muscle Gain Training</h4>
+                    <p class="text-sm text-gray-400">Hypertrophy-focused workouts to build strength and aesthetic muscle mass.</p>
+                </div>
+                <div class="glass-card p-8 rounded-2xl text-center">
+                    <i class="fa-solid fa-person-running text-3xl gold-text mb-4"></i>
+                    <h4 class="text-lg font-bold mb-2 oswald uppercase">Personal Training</h4>
+                    <p class="text-sm text-gray-400">1-on-1 expert coaching tailored to your specific body type and fitness level.</p>
+                </div>
+                <div class="glass-card p-8 rounded-2xl text-center">
+                    <i class="fa-solid fa-bolt text-3xl gold-text mb-4"></i>
+                    <h4 class="text-lg font-bold mb-2 oswald uppercase">Strength & Conditioning</h4>
+                    <p class="text-sm text-gray-400">Improve your athletic performance with functional strength movements.</p>
+                </div>
+                <div class="glass-card p-8 rounded-2xl text-center">
+                    <i class="fa-solid fa-heart-pulse text-3xl gold-text mb-4"></i>
+                    <h4 class="text-lg font-bold mb-2 oswald uppercase">Cardio Workouts</h4>
+                    <p class="text-sm text-gray-400">High-energy heart-health sessions utilizing our modern treadmill & cycle fleet.</p>
+                </div>
+                <div class="glass-card p-8 rounded-2xl text-center">
+                    <i class="fa-solid fa-fire text-3xl gold-text mb-4"></i>
+                    <h4 class="text-lg font-bold mb-2 oswald uppercase">Transformation Plans</h4>
+                    <p class="text-sm text-gray-400">Full lifestyle roadmaps including nutrition advice for peak results.</p>
+                </div>
+                <div class="glass-card p-8 rounded-2xl text-center">
+                    <i class="fa-solid fa-hands-holding-child text-3xl gold-text mb-4"></i>
+                    <h4 class="text-lg font-bold mb-2 oswald uppercase">Beginner Guidance</h4>
+                    <p class="text-sm text-gray-400">Safe, welcoming introduction for those new to the gym environment.</p>
+                </div>
+                <div class="glass-card p-8 rounded-2xl text-center">
+                    <i class="fa-solid fa-venus text-3xl gold-text mb-4"></i>
+                    <h4 class="text-lg font-bold mb-2 oswald uppercase">Women Fitness</h4>
+                    <p class="text-sm text-gray-400">Empowering programs for women in a professional, inclusive unisex setting.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- Detailed Features Section -->
-<section id="features" class="py-24 px-4 bg-[#0a0a0a]">
-<div class="max-w-7xl mx-auto">
-<div class="text-center mb-16">
-<h3 class="gold-text oswald font-bold tracking-widest mb-2 uppercase">Core Amenities</h3>
-<h2 class="text-4xl oswald font-bold uppercase">The BeSpoke Experience</h2>
-</div>
+    <!-- SEO Content Blocks -->
+    <section class="py-24 px-4 bg-zinc-900">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-12">
+            <div class="space-y-4">
+                <h4 class="oswald text-xl font-bold gold-text uppercase">Best Gym in Hubli for Weight Loss</h4>
+                <p class="text-gray-400 text-sm leading-relaxed">Looking for the best gym in Hubli for weight loss? BeSpoke Fitness offers structured workout plans, fat-loss guidance, cardio sessions, and professional coaching to help you achieve visible results.</p>
+            </div>
+            <div class="space-y-4">
+                <h4 class="oswald text-xl font-bold gold-text uppercase">Top Unisex Gym in Hubballi</h4>
+                <p class="text-gray-400 text-sm leading-relaxed">BeSpoke Fitness is a premium unisex gym in Hubballi where men and women train comfortably in a safe, motivating, and energetic environment.</p>
+            </div>
+            <div class="space-y-4">
+                <h4 class="oswald text-xl font-bold gold-text uppercase">Expert Personal Trainers in Hubli</h4>
+                <p class="text-gray-400 text-sm leading-relaxed">Our experienced trainers create customized fitness plans based on your body type, goals, and experience level to maximize results safely.</p>
+            </div>
+        </div>
+    </section>
 
-<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
-<div class="glass-card p-6 rounded-2xl border-l-2 border-l-[#D4AF37]">
-<i class="fa-solid fa-expand text-2xl gold-text mb-4"></i>
-<h4 class="text-lg font-bold mb-2 oswald uppercase">9,000 Sq. Ft. Facility</h4>
-<p class="text-sm text-gray-400">Expansive workout zones ensuring no overcrowding and a focused environment.</p>
-</div>
-<div class="glass-card p-6 rounded-2xl border-l-2 border-l-[#D4AF37]">
-<i class="fa-solid fa-hot-tub-person text-2xl gold-text mb-4"></i>
-<h4 class="text-lg font-bold mb-2 oswald uppercase">Premium Sauna</h4>
-<p class="text-sm text-gray-400">Detoxify and relax your muscles after an intense training session.</p>
-</div>
-<div class="glass-card p-6 rounded-2xl border-l-2 border-l-[#D4AF37]">
-<i class="fa-solid fa-dumbbell text-2xl gold-text mb-4"></i>
-<h4 class="text-lg font-bold mb-2 oswald uppercase">Personal Training</h4>
-<p class="text-sm text-gray-400">One-on-one sessions with Hubli's top-tier certified fitness experts.</p>
-</div>
-<div class="glass-card p-6 rounded-2xl border-l-2 border-l-[#D4AF37]">
-<i class="fa-solid fa-mug-hot text-2xl gold-text mb-4"></i>
-<h4 class="text-lg font-bold mb-2 oswald uppercase">Wellness Café</h4>
-<p class="text-sm text-gray-400">Health-focused nutrition bar for pre-workout energy and post-workout protein.</p>
-</div>
-<div class="glass-card p-6 rounded-2xl border-l-2 border-l-[#D4AF37]">
-<i class="fa-solid fa-weight-hanging text-2xl gold-text mb-4"></i>
-<h4 class="text-lg font-bold mb-2 oswald uppercase">Strength Zone</h4>
-<p class="text-sm text-gray-400">Equipped with premium international brands for heavy lifting and hypertrophy.</p>
-</div>
-<div class="glass-card p-6 rounded-2xl border-l-2 border-l-[#D4AF37]">
-<i class="fa-solid fa-peace text-2xl gold-text mb-4"></i>
-<h4 class="text-lg font-bold mb-2 oswald uppercase">Yoga & Holistic</h4>
-<p class="text-sm text-gray-400">Dedicated spaces for flexibility, meditation, and mind-body balance.</p>
-</div>
-<div class="glass-card p-6 rounded-2xl border-l-2 border-l-[#D4AF37]">
-<i class="fa-solid fa-mobile-screen text-2xl gold-text mb-4"></i>
-<h4 class="text-lg font-bold mb-2 oswald uppercase">App/Online Classes</h4>
-<p class="text-sm text-gray-400">Hybrid fitness models allowing you to train with us from your home.</p>
-</div>
-<div class="glass-card p-6 rounded-2xl border-l-2 border-l-[#D4AF37]">
-<i class="fa-solid fa-vault text-2xl gold-text mb-4"></i>
-<h4 class="text-lg font-bold mb-2 oswald uppercase">Luxury Lockers</h4>
-<p class="text-sm text-gray-400">Safe, clean, and spacious locker facilities with private changing rooms.</p>
-</div>
-</div>
-</div>
-</section>
+    <!-- Booking Form Section -->
+    <section id="booking" class="py-24 px-4 bg-black">
+        <div class="max-w-5xl mx-auto">
+            <div class="glass-card rounded-3xl overflow-hidden flex flex-col md:flex-row">
+                <div class="md:w-1/2 p-10 bg-gradient-to-br from-zinc-800 to-black">
+                    <h3 class="oswald text-3xl font-bold mb-6 gold-text uppercase">Book Free Trial</h3>
+                    <p class="text-gray-400 mb-8 leading-relaxed">Ready to start your fitness journey? Join Hubli’s trusted fitness community today and transform your life. Fill in your details below.</p>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-green-500"></i> <span>Free Body Composition Analysis</span></li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-green-500"></i> <span>Personal Trainer Consultation</span></li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-green-500"></i> <span>Access to Modern Equipment</span></li>
+                    </ul>
+                </div>
+                <div class="md:w-1/2 p-10 bg-zinc-900/50">
+                    <div class="space-y-5">
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-2">Full Name</label>
+                            <input type="text" id="cust-name" placeholder="Your Name" class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:border-[#D4AF37] transition-all">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-2">WhatsApp Number</label>
+                            <input type="tel" id="cust-phone" placeholder="Your mobile number" class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:border-[#D4AF37] transition-all">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-2">Primary Goal</label>
+                            <select id="cust-reason" class="w-full bg-zinc-800 border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:border-[#D4AF37] transition-all text-gray-300">
+                                <option value="Weight Loss">Weight Loss</option>
+                                <option value="Muscle Gain">Muscle Gain</option>
+                                <option value="General Fitness">General Fitness</option>
+                                <option value="Athletic Training">Athletic Training</option>
+                            </select>
+                        </div>
+                        <button onclick="confirmBooking()" class="w-full gold-gradient text-black font-extrabold py-4 rounded-lg btn-hover transition-all uppercase tracking-widest mt-4">
+                            CONFIRM BOOKING
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- BMI Calculator -->
-<section id="bmi" class="py-24 px-4 bg-zinc-900">
-<div class="max-w-4xl mx-auto">
-<div class="grid md:grid-cols-2 gap-12 items-center">
-<div>
-<h2 class="text-4xl oswald font-bold mb-6 uppercase">Track Your <span class="gold-text">Health</span></h2>
-<p class="text-gray-400 mb-8">Ready to start your journey? Use our scientific BMI tool to determine your baseline and set realistic goals with our trainers.</p>
-<div class="space-y-4">
-<div class="flex items-center justify-between p-3 border-b border-white/5">
-<span class="text-blue-400">Underweight</span>
-<span class="font-bold">< 18.5</span>
-</div>
-<div class="flex items-center justify-between p-3 border-b border-white/5">
-<span class="text-green-400">Healthy Weight</span>
-<span class="font-bold">18.5 – 24.9</span>
-</div>
-<div class="flex items-center justify-between p-3 border-b border-white/5">
-<span class="text-yellow-400">Overweight</span>
-<span class="font-bold">25 – 29.9</span>
-</div>
-<div class="flex items-center justify-between p-3 border-b border-white/5">
-<span class="text-red-400">Obese</span>
-<span class="font-bold">> 30</span>
-</div>
-</div>
-</div>
+    <!-- Footer -->
+    <footer id="contact" class="bg-black pt-20 pb-10 px-4 border-t border-white/10">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
+                <div>
+                    <h4 class="oswald text-2xl font-bold mb-6 uppercase"> <span class="gold-text">BESPOKE</span> FITNESS</h4>
+                    <p class="text-gray-500 mb-6 leading-relaxed">
+                        Deshpande Nagar, 1st and 2nd floor, Vishnupriya Complex, Hospital Road, Hubballi, Karnataka 580029
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-[#D4AF37] hover:text-black transition-all"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://wa.me/919916328325" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-[#25d366] hover:text-white transition-all"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-[#D4AF37] hover:text-black transition-all"><i class="fa-brands fa-facebook-f"></i></a>
+                    </div>
+                </div>
 
-<div class="glass-card p-8 rounded-3xl">
-<div class="grid grid-cols-2 gap-4 mb-6">
-<div>
-<label class="block text-xs uppercase font-bold text-gray-500 mb-2">Weight (kg)</label>
-<input type="number" id="weight" placeholder="e.g. 70" class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:border-[#D4AF37] transition-all">
-</div>
-<div>
-<label class="block text-xs uppercase font-bold text-gray-500 mb-2">Height (cm)</label>
-<input type="number" id="height" placeholder="e.g. 175" class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:border-[#D4AF37] transition-all">
-</div>
-</div>
-<button onclick="calculateBMI()" class="w-full gold-gradient text-black font-bold py-4 rounded-lg btn-hover transition-all mb-6">CALCULATE NOW</button>
+                <div>
+                    <h4 class="oswald text-xl font-bold mb-6 uppercase">Quick Links</h4>
+                    <ul class="space-y-4 text-gray-500">
+                        <li><a href="https://wa.me/919916328325?text=Get Membership" class="hover:text-green-400 flex items-center gap-2 transition-all"><i class="fa-brands fa-whatsapp"></i> Get Membership</a></li>
+                        <li><a href="https://wa.me/919916328325?text=Book Free Trial" class="hover:text-green-400 flex items-center gap-2 transition-all"><i class="fa-brands fa-whatsapp"></i> Book Free Trial</a></li>
+                        <li><a href="tel:6363641399" class="hover:text-white flex items-center gap-2 transition-all"><i class="fa-solid fa-phone"></i> Call Hubli Center</a></li>
+                    </ul>
+                </div>
 
-<div id="bmi-result-box" class="hidden text-center p-6 bg-white/5 rounded-xl">
-<p class="text-sm text-gray-400 uppercase tracking-widest mb-1">Your Result</p>
-<h3 id="bmi-value" class="text-5xl font-bold gold-text mb-2">24.5</h3>
-<p id="bmi-category" class="text-xl font-semibold uppercase">Normal Weight</p>
-<a href="https://wa.me/919916328325?text=My BMI is " id="wa-share-bmi" target="_blank" class="mt-4 inline-block text-xs text-green-400 hover:underline">Consult a trainer about this result</a>
-</div>
-</div>
-</div>
-</div>
-</section>
+                <div>
+                    <h4 class="oswald text-xl font-bold mb-6 uppercase">OPERATING HOURS</h4>
+                    <ul class="space-y-4 text-gray-500 text-sm">
+                        <li class="flex justify-between border-b border-white/5 pb-2"><span>Monday - Friday</span> <span class="text-white">06:00 AM - 10:00 PM</span></li>
+                        <li class="flex justify-between border-b border-white/5 pb-2"><span>Saturday</span> <span class="text-white">06:00 AM - 10:00 PM</span></li>
+                        <li class="flex justify-between"><span>Sunday</span> <span class="text-red-500 uppercase font-bold">CLOSED</span></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/5 pt-10 text-center text-gray-600 text-[10px] uppercase tracking-[0.2em] space-y-2">
+                <p>Best Gym in Hubli | Unisex Gym in Hubballi | Fitness Center Karnataka | Weight Loss Gym Near Me | Personal Training Hubli</p>
+                <p>&copy; 2024 BeSpoke Fitness Hubballi. WhatsApp: 9916328325 | Calls: 6363641399.</p>
+            </div>
+        </div>
+    </footer>
 
-<!-- Footer -->
-<footer id="contact" class="bg-black pt-20 pb-10 px-4 border-t border-white/10">
-<div class="max-w-7xl mx-auto">
-<div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
-<div>
-<h4 class="oswald text-2xl font-bold mb-6 uppercase"> <span class="gold-text">BESPOKE</span> FITNESS</h4>
-<p class="text-gray-500 mb-6 leading-relaxed">
-1st and 2nd floor, Vishnupriya Complex, Hospital Road, Hubballi, Karnataka 580029
-</p>
-<div class="flex gap-4">
-<a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-[#D4AF37] hover:text-black transition-all"><i class="fa-brands fa-instagram"></i></a>
-<a href="https://wa.me/919916328325" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-[#25d366] hover:text-white transition-all"><i class="fa-brands fa-whatsapp"></i></a>
-<a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-[#D4AF37] hover:text-black transition-all"><i class="fa-brands fa-facebook-f"></i></a>
-</div>
-</div>
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/919916328325?text=WhatsApp Now - Interested in BeSpoke Fitness Hubballi" target="_blank" class="whatsapp-float">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
 
-<div>
-<h4 class="oswald text-xl font-bold mb-6 uppercase">Direct Support</h4>
-<ul class="space-y-4 text-gray-500">
-<li><a href="https://wa.me/919916328325?text=I'd like to book a trial session" class="hover:text-green-400 flex items-center gap-2 transition-all"><i class="fa-brands fa-whatsapp"></i> Book Free Trial</a></li>
-<li><a href="https://wa.me/919916328325?text=Tell me about the monthly packages" class="hover:text-green-400 flex items-center gap-2 transition-all"><i class="fa-brands fa-whatsapp"></i> Membership Plans</a></li>
-<li><a href="tel:6363641399" class="hover:text-white flex items-center gap-2 transition-all"><i class="fa-solid fa-phone"></i> Call Hubli Center</a></li>
-</ul>
-</div>
+    <!-- Phone Floating Button -->
+    <a href="tel:6363641399" class="md:hidden fixed bottom-6 right-6 w-14 h-14 gold-gradient rounded-full flex items-center justify-center text-black text-2xl shadow-2xl z-[100] animate-bounce">
+        <i class="fa-solid fa-phone"></i>
+    </a>
 
-<div>
-<h4 class="oswald text-xl font-bold mb-6 uppercase">OPERATING HOURS</h4>
-<ul class="space-y-4 text-gray-500 text-sm">
-<li class="flex justify-between border-b border-white/5 pb-2"><span>Monday - Friday</span> <span class="text-white">06:00 AM - 10:00 PM</span></li>
-<li class="flex justify-between border-b border-white/5 pb-2"><span>Saturday</span> <span class="text-white">06:00 AM - 10:00 PM</span></li>
-<li class="flex justify-between"><span>Sunday</span> <span class="text-red-500">CLOSED</span></li>
-<li class="pt-4 italic text-xs text-gray-600 font-bold">*Labor Day/Holidays may affect these times.</li>
-</ul>
-</div>
-</div>
+    <script>
+        function scrollToId(id) {
+            const element = document.getElementById(id);
+            if(element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
 
-<div class="border-t border-white/5 pt-10 text-center text-gray-600 text-xs uppercase tracking-widest">
-<p>&copy; 2024 BeSpoke Fitness Center & Hubli's Unisex Gym. For WhatsApp: 9916328325.</p>
-</div>
-</div>
-</footer>
+        function confirmBooking() {
+            const name = document.getElementById('cust-name').value;
+            const phone = document.getElementById('cust-phone').value;
+            const reason = document.getElementById('cust-reason').value;
 
-<!-- WhatsApp Floating Button -->
-<a href="https://wa.me/919916328325?text=Hi! I am visiting your website and have a question." target="_blank" class="whatsapp-float">
-<i class="fa-brands fa-whatsapp"></i>
-</a>
+            if(!name || !phone) {
+                alert("Please fill in your details to book your session.");
+                return;
+            }
 
-<!-- Phone Floating Button (Calling owner - Mobile Only) -->
-<a href="tel:6363641399" class="md:hidden fixed bottom-6 right-6 w-14 h-14 gold-gradient rounded-full flex items-center justify-center text-black text-2xl shadow-2xl z-[100] animate-bounce">
-<i class="fa-solid fa-phone"></i>
-</a>
-
-<script>
-function scrollToId(id) {
-const element = document.getElementById(id);
-if(element) {
-element.scrollIntoView({ behavior: 'smooth' });
-}
-}
-
-function confirmBooking() {
-const name = document.getElementById('cust-name').value;
-const phone = document.getElementById('cust-phone').value;
-const reason = document.getElementById('cust-reason').value;
-
-if(!name || !phone) {
-alert("Please fill in your name and phone number to continue.");
-return;
-}
-
-const ownerWa = "919916328325";
-const message = `*NEW GYM BOOKING INQUIRY*%0A%0A*Name:* ${name}%0A*Phone:* ${phone}%0A*Goal:* ${reason}%0A%0A_Sent via BeSpoke Fitness Website_`;
-
-const waUrl = `https://wa.me/${ownerWa}?text=${message}`;
-window.open(waUrl, '_blank');
-}
-
-function calculateBMI() {
-const weight = parseFloat(document.getElementById('weight').value);
-const height = parseFloat(document.getElementById('height').value) / 100;
-
-if (weight > 0 && height > 0) {
-const bmi = (weight / (height * height)).toFixed(1);
-const resultBox = document.getElementById('bmi-result-box');
-const bmiVal = document.getElementById('bmi-value');
-const bmiCat = document.getElementById('bmi-category');
-const waLink = document.getElementById('wa-share-bmi');
-
-resultBox.classList.remove('hidden');
-bmiVal.innerText = bmi;
-
-let category = "";
-if (bmi < 18.5) {
-category = "Underweight";
-bmiCat.className = "text-xl font-semibold uppercase text-blue-400";
-} else if (bmi >= 18.5 && bmi <= 24.9) {
-category = "Healthy Weight";
-bmiCat.className = "text-xl font-semibold uppercase text-green-400";
-} else if (bmi >= 25 && bmi <= 29.9) {
-category = "Overweight";
-bmiCat.className = "text-xl font-semibold uppercase text-yellow-400";
-} else {
-category = "Obese";
-bmiCat.className = "text-xl font-semibold uppercase text-red-400";
-}
-
-bmiCat.innerText = category;
-waLink.href = `https://wa.me/919916328325?text=My BMI is ${bmi} (${category}). I'd like to discuss a workout plan.`;
-
-resultBox.classList.add('scale-110');
-setTimeout(() => resultBox.classList.remove('scale-110'), 200);
-} else {
-document.getElementById('weight').focus();
-}
-}
-</script>
+            const ownerWa = "919916328325";
+            const message = `*NEW TRIAL BOOKING - BESPOKE FITNESS*%0A%0A*Name:* ${name}%0A*Phone:* ${phone}%0A*Goal:* ${reason}%0A%0A_Sent via BeSpoke Fitness SEO Site_`;
+            
+            const waUrl = `https://wa.me/${ownerWa}?text=${message}`;
+            window.open(waUrl, '_blank');
+        }
+    </script>
 </body>
 </html>
