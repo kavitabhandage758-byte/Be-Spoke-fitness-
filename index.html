@@ -110,7 +110,8 @@
                 <div class="hidden md:flex space-x-8">
                     <a href="#home" class="nav-link text-sm font-semibold uppercase tracking-wider">Home</a>
                     <a href="#about" class="nav-link text-sm font-semibold uppercase tracking-wider">About</a>
-                    <a href="#services" class="nav-link text-sm font-semibold uppercase tracking-wider">Services</a>
+                    <a href="#results" class="nav-link text-sm font-semibold uppercase tracking-wider">Results</a>
+                    <a href="#bmi" class="nav-link text-sm font-semibold uppercase tracking-wider">BMI</a>
                     <a href="#booking" class="nav-link text-sm font-semibold uppercase tracking-wider">Book Now</a>
                 </div>
                 <div class="flex gap-4">
@@ -170,6 +171,90 @@
                     <div class="absolute -bottom-6 -left-6 gold-gradient p-8 rounded-2xl text-black">
                         <p class="oswald text-4xl font-bold">9,000</p>
                         <p class="text-xs font-bold uppercase">Square Feet Area</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Real Results Section -->
+    <section id="results" class="py-24 px-4 bg-black">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h3 class="gold-text oswald font-bold tracking-widest mb-2 uppercase">Real People, Real Results</h3>
+                <h2 class="text-4xl oswald font-bold uppercase">Our Community Transformations</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="glass-card overflow-hidden rounded-3xl">
+                    <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Result 1" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold oswald gold-text uppercase">Amit R.</h4>
+                        <p class="text-sm text-gray-400 mt-2 italic">"Lost 15kg in 4 months with the Weight Loss Program. The environment is incredibly motivating!"</p>
+                    </div>
+                </div>
+                <div class="glass-card overflow-hidden rounded-3xl">
+                    <img src="https://images.unsplash.com/photo-1594381898411-846e7d193883?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Result 2" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold oswald gold-text uppercase">Sneha P.</h4>
+                        <p class="text-sm text-gray-400 mt-2 italic">"Best unisex gym in Hubballi. The personal trainers really care about your form and progress."</p>
+                    </div>
+                </div>
+                <div class="glass-card overflow-hidden rounded-3xl">
+                    <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Result 3" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold oswald gold-text uppercase">Rahul K.</h4>
+                        <p class="text-sm text-gray-400 mt-2 italic">"From skinny to muscular. The strength & conditioning zone is world-class."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BMI Calculator Section -->
+    <section id="bmi" class="py-24 px-4 bg-zinc-900">
+        <div class="max-w-4xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-4xl oswald font-bold mb-6 uppercase">Track Your <span class="gold-text">Health</span></h2>
+                    <p class="text-gray-400 mb-8">Ready to start your journey? Use our scientific BMI tool to determine your baseline and set realistic goals with our expert trainers in Hubli.</p>
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between p-3 border-b border-white/5">
+                            <span class="text-blue-400">Underweight</span>
+                            <span class="font-bold">< 18.5</span>
+                        </div>
+                        <div class="flex items-center justify-between p-3 border-b border-white/5">
+                            <span class="text-green-400">Healthy</span>
+                            <span class="font-bold">18.5 – 24.9</span>
+                        </div>
+                        <div class="flex items-center justify-between p-3 border-b border-white/5">
+                            <span class="text-yellow-400">Overweight</span>
+                            <span class="font-bold">25 – 29.9</span>
+                        </div>
+                        <div class="flex items-center justify-between p-3 border-b border-white/5">
+                            <span class="text-red-400">Obese</span>
+                            <span class="font-bold">> 30</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="glass-card p-8 rounded-3xl">
+                    <div class="grid grid-cols-2 gap-4 mb-6">
+                        <div>
+                            <label class="block text-xs uppercase font-bold text-gray-500 mb-2">Weight (kg)</label>
+                            <input type="number" id="weight" placeholder="e.g. 70" class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:border-[#D4AF37] transition-all">
+                        </div>
+                        <div>
+                            <label class="block text-xs uppercase font-bold text-gray-500 mb-2">Height (cm)</label>
+                            <input type="number" id="height" placeholder="e.g. 175" class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:border-[#D4AF37] transition-all">
+                        </div>
+                    </div>
+                    <button onclick="calculateBMI()" class="w-full gold-gradient text-black font-bold py-4 rounded-lg btn-hover transition-all mb-6">CALCULATE NOW</button>
+                    
+                    <div id="bmi-result-box" class="hidden text-center p-6 bg-white/5 rounded-xl">
+                        <p class="text-sm text-gray-400 uppercase tracking-widest mb-1">Your Result</p>
+                        <h3 id="bmi-value" class="text-5xl font-bold gold-text mb-2">24.5</h3>
+                        <p id="bmi-category" class="text-xl font-semibold uppercase">Normal Weight</p>
+                        <a href="https://wa.me/919916328325?text=Hi, my BMI is " id="wa-share-bmi" target="_blank" class="mt-4 inline-block text-xs text-green-400 hover:underline">Consult a trainer about this result</a>
                     </div>
                 </div>
             </div>
@@ -348,6 +433,45 @@
             }
         }
 
+        function calculateBMI() {
+            const weight = parseFloat(document.getElementById('weight').value);
+            const height = parseFloat(document.getElementById('height').value) / 100;
+
+            if (weight > 0 && height > 0) {
+                const bmi = (weight / (height * height)).toFixed(1);
+                const resultBox = document.getElementById('bmi-result-box');
+                const bmiVal = document.getElementById('bmi-value');
+                const bmiCat = document.getElementById('bmi-category');
+                const waLink = document.getElementById('wa-share-bmi');
+
+                resultBox.classList.remove('hidden');
+                bmiVal.innerText = bmi;
+
+                let category = "";
+                if (bmi < 18.5) {
+                    category = "Underweight";
+                    bmiCat.className = "text-xl font-semibold uppercase text-blue-400";
+                } else if (bmi >= 18.5 && bmi <= 24.9) {
+                    category = "Healthy";
+                    bmiCat.className = "text-xl font-semibold uppercase text-green-400";
+                } else if (bmi >= 25 && bmi <= 29.9) {
+                    category = "Overweight";
+                    bmiCat.className = "text-xl font-semibold uppercase text-yellow-400";
+                } else {
+                    category = "Obese";
+                    bmiCat.className = "text-xl font-semibold uppercase text-red-400";
+                }
+                
+                bmiCat.innerText = category;
+                waLink.href = `https://wa.me/919916328325?text=Hi, my BMI is ${bmi} (${category}). I'd like to discuss a workout plan at BeSpoke Fitness.`;
+                
+                resultBox.classList.add('scale-105');
+                setTimeout(() => resultBox.classList.remove('scale-105'), 200);
+            } else {
+                document.getElementById('weight').focus();
+            }
+        }
+
         function confirmBooking() {
             const name = document.getElementById('cust-name').value;
             const phone = document.getElementById('cust-phone').value;
@@ -366,4 +490,4 @@
         }
     </script>
 </body>
-</html>
+</html>                            
